@@ -54,3 +54,42 @@ print(isinstance("Paul", str)) # True
 
 
 #Strings
+# strings are an instance of the str class, e.g. "Paul"
+long_str = "This it's is a very long string that \nspans multiple lines and is enclosed in double quotes"
+print(long_str)
+print(type(long_str)) # <class 'str'>
+print(type(long_str) == str) # <class 'str'>
+print(isinstance(long_str, str)) # True
+
+
+my_comment = "This is my short commnet"
+print(my_comment)
+print(len(my_comment)) # 26print(my_comment[0]) # Zero is the first index
+print(my_comment[3]) # 
+print(my_comment[4]) #
+
+my_long_comment = my_comment.replace("short", "long") # Have to create a new variable to store the new string
+print(my_long_comment) # This is my short comment
+print(len(my_long_comment)) # 26
+
+
+my_best_comment = "This is my best comment"
+print(my_best_comment.count(" ")) # there are 4 spaces in the string
+print(my_best_comment.count("is")) # there are 2 "is" in the string
+print(my_best_comment[4]) # i
+print(my_best_comment[5]) # s
+print(my_best_comment[6]) # space
+print(my_best_comment[2:7]) # m
+print(my_best_comment[ :10])
+print(my_best_comment[:-1])
+print(my_best_comment[:-10])
+print(my_best_comment[4:-10])
+print(my_best_comment.find("best")) # 11
+print(my_best_comment.find("long")) # find method, if -1 is returned, the string is not found
+print(my_best_comment.split(" ")) # this creates a list of words in the string
+print(my_best_comment.upper()) # THIS IS MY BEST COMMENT
+print(my_best_comment.lower()) # this is my best comment
+# print(dir(my_best_comment)) # returns all the methods that can be used on the stringclear
+
+
+#String Concatenation
