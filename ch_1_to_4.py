@@ -16,6 +16,11 @@ print({
      'size': 'John'
      })
 
+# Functions
+# A function is a block of code that only runs when it is called
+# You can pass data, known as parameters, into a function`
+# A function can return data as a result
+ 
 
 def hello(name):
     print(name)
