@@ -92,4 +92,96 @@ print(my_best_comment.lower()) # this is my best comment
 # print(dir(my_best_comment)) # returns all the methods that can be used on the stringclear
 
 
+
+
+#Chapter 11 - String Concatenation
 #String Concatenation
+#f-string
+# String concatenation is the process of combining two or more strings to create a new string
+
+# Using plus operator
+my_name = "Paul"
+my_hobby = "coding"
+time = 8
+
+info = my_name + " likes " + my_hobby + " at " + str(time) + " o-clock" # time is an integer, so it has to be converted to a string
+print(info) # TypeError: can only concatenate str (not "int") to str
+
+# Using f-string
+info = f"{my_name} likes {my_hobby} at {time} o-clock" # uses three expressions e.g., {my_name}, {my_hobby}, {time}
+print(info) # Paul likes coding at 8 o-clock
+
+# Using format method
+info = "{} likes {} at {} o-clock".format(my_name, my_hobby, time) # the three empty curly braces are placeholders for the three variables
+print(info) # Paul likes coding at 8 o-clock
+
+# Using join method
+info = " ".join([my_name, "likes", my_hobby, "at", str(time), "o-clock"])
+print(info) # Paul likes coding at 8 o-clock
+
+
+
+
+#Chapter 12 - Numeric Types
+# Integers
+
+my_num = 1000_0000_00000_00000
+other_num = 100 * 20
+
+res = my_num + other_num
+print(res)
+
+
+input_str = input("Enter a number: ") # input() function always returns a string
+print(type(input_str))
+try:
+    input_num = int(input_str) # this converts the string to an integer. Creating new instance of the int class.
+    print(type(input_num))
+except ValueError:
+        print("Invalid input")
+
+
+# Floats
+average_rating = 4.85
+print(average_rating.is_integer())
+print(round(average_rating)) # 5 here the decimal part is rounded
+print(int(average_rating)) # 4 here the decimal part is truncated
+print(float(100)) # 100.0 # converts the integer to a float
+
+
+#Chapter 13 - Boolean Values
+# Boolean Values
+db_is_available = False
+print(db_is_available)
+print(type(db_is_available))
+print(isinstance(db_is_available, bool)) # True
+
+db_is_available = True
+print(db_is_available)
+
+print(bool(10)) # it is true because 10 is a non-zero value
+print(bool(0)) # IT IS FALSE BECAUSE 0 IS A FALSE VALUE
+print(bool(0.0)) # it is false because 0.0 is a float
+print(bool(0.1)) # it is true because 0.1 is a non-zero value
+print(bool("Paul")) # it is true because "Paul" is a non-empty string
+print(bool("")) # it is false because "" is an empty string
+
+print(100<200) # True
+print(100>200) # False
+print([1, 2, 3] == [1, 2, 3]) # True
+print([1, 2, 3] == [1, 2, 4]) # False
+
+is_available = True
+print(is_available == True) # True
+print(is_available == False) # False
+
+if is_available:
+    print("The database is available")
+else:
+    print("The database is not available")
+
+    my_name = "Paul"
+    if is_available and my_name == "Paul":
+        print("The database is available and the name is Paul")
+    else:
+        print("The database is not available or the name is not Paul")
